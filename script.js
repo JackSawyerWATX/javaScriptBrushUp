@@ -851,6 +851,21 @@ console.log(myDog3);
 
 console.log(next);
 
+// Setup
+const myDog4 = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"],
+  "bark": "woof"
+};
+
+delete myDog4.tails;
+
+console.log(myDog4);
+
+console.log(next);
+
 
 
 console.log(next);
