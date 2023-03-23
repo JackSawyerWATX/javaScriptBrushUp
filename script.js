@@ -823,6 +823,17 @@ console.log(player);
 
 console.log(next);
 
+// Setup
+const myDog2 = {
+  "name": "Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["Happy Campers"]
+};
 
+// Only change code below this line
+myDog2.friends = "Happy Coder"
+
+console.log(myDog2);
 
 console.log(next);
