@@ -1,0 +1,777 @@
+var next = "\n====> NEXT <====\n";
+
+var a = 5;
+var b = 10;
+var c = "I am a";
+
+a = a + 1;
+b = b + 5;
+c = c + " String!";
+
+console.log(c);
+
+console.log(next);
+
+var studlyCapVar;
+var properCamelCase;
+var titleCaseOver;
+
+studlyCapVar = 10;
+properCamelCase = "A String";
+titleCaseOver = 9000;
+
+console.log(studlyCapVar, properCamelCase, 9000);
+
+console.log(next);
+
+let catName = "Oliver";
+let catSound = "Meow!";
+
+console.log(catName + " says " + catSound);
+
+console.log(next);
+
+const FCC = "Stuff";
+let fact = "is cool!";
+fact = "is awesome!";
+console.log(FCC, fact);
+
+console.log(next);
+
+const remainder = 11 % 3;
+
+console.log(remainder);
+
+console.log(next);
+
+let d = 3;
+let e = 17;
+let f = 12;
+
+d = d += 12;
+e = e += 9;
+f = f += 7;
+
+console.log(d, e, f);
+
+console.log(next);
+
+let g = 11;
+let h = 9;
+let i = 3;
+
+g = g -= 6;
+h = h -= 15;
+i = i -= 1;
+
+console.log(g, h, i);
+
+console.log(next);
+
+let j = 5;
+let k = 12;
+let l = 4.6;
+
+j = j *= 5;
+k = k *= 3;
+l = l *= 10;
+
+console.log(j, k, l);
+
+console.log(next);
+
+let m = 48;
+let n = 108;
+let o = 33;
+
+m = m /= 12;
+n = n /= 4;
+o = o /= 11;
+
+console.log(m, n, o);
+
+console.log(next);
+
+const myStr = "I am a \"double quoted\" string inside \"double quotes\".";
+
+console.log(myStr);
+
+console.log(next);
+
+const myStr2 = '<a href="http://www.example.com" target="_blank">Link</a>';
+
+console.log(myStr2);
+
+console.log(next);
+
+const myStr3 = 'FirstLine\n\t\\SecondLine\nThirdLine';
+
+console.log(myStr3);
+
+console.log(next);
+
+const myStr4 = "This is the end." + " The end of our story.";
+
+console.log(myStr4);
+
+console.log(next);
+
+let myStr5 = "This is the first sentence. ";
+myStr5 += "This is the second sentence.";
+
+console.log(myStr5);
+
+console.log(next);
+
+const myName = "Jack Sawyer";
+const myStr6 = "My name is " + myName + " and I am well!";
+
+console.log(myStr6);
+
+console.log(next);
+
+const someAdjective = "badass!";
+let myStr7 = "Learning to code is ";
+myStr7 += someAdjective;
+
+console.log(myStr7);
+
+console.log(next);
+
+let lastNameLength = 0;
+const lastName = "Jack Sawyer";
+
+lastNameLength = lastName.length;
+firstLetterOfLastName = lastName[3];
+const thirdLetterOfLastName = lastName[2];
+const lastLetterOfLastName = lastName[lastName.length - 1];
+const secondToLastLetterOfLastName = lastName[lastName.length - 2];
+
+console.log(lastNameLength,
+  firstLetterOfLastName,
+  thirdLetterOfLastName,
+  lastLetterOfLastName,
+  secondToLastLetterOfLastName);
+
+console.log(next);
+
+let myStr8 = "Jello World";
+myStr8 = "Hello World";
+
+console.log(myStr8);
+
+console.log(next);
+
+const myNoun = "dog";
+const myAdjective = "big";
+const myVerb = "ran";
+const myAdverb = "quickly";
+
+const wordBlanks = "My " + myNoun + " is not very " + myAdjective + " but " + myVerb + " quite " + myAdverb + " in the park.";
+
+console.log(wordBlanks);
+
+console.log(next);
+
+const myArray = ["Smoked ham", 1, "gouda cheese", 2, "mustard", 3, "pickles", 4, "mayo", 5, "bread", 6, "lettuce", 7, "tomato", 8];
+
+console.log(myArray);
+
+console.log(next);
+
+const myArray2 = [["Rockets", 34], ["Cougars", 34]];
+
+console.log(myArray2);
+
+console.log(next);
+
+const myArray3 = [50, 60, 70];
+const myData = myArray3[0];
+
+console.log(myData);
+
+console.log(next);
+
+const myArray4 = [18, 64, 99];
+console.log(myArray4);
+myArray4[0] = 45;
+console.log(myArray4);
+myArray4[1] = 27;
+console.log(myArray4);
+myArray4[2] = 72;
+console.log(myArray4);
+
+console.log(next);
+
+const myArray5 = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [[10, 11, 12], 13, 14],];
+const myData2 = myArray5[2][1];
+
+console.log(myData2);
+
+console.log(next);
+
+const myArray6 = [["John", 23], ["cat", 2]];
+myArray6.push(["dog", 3]);
+console.log(myArray6);
+
+console.log(next);
+
+const myArray7 = [["John", 23], ["cat", 2]];
+
+const removedFromMyArray = myArray7.pop();
+console.log(removedFromMyArray);
+
+console.log(next);
+
+
+const myArray8 = [["John", 23], ["dog", 3]];
+const removedFromMyArray2 = myArray8.shift();
+console.log(removedFromMyArray2);
+
+console.log(next);
+
+const myArray9 = [["John", 23], ["dog", 3]];
+console.log(myArray9);
+myArray9.shift();
+console.log(myArray9);
+myArray9.unshift(["Paul", 35]);
+console.log(myArray9);
+
+console.log(next);
+
+const myList = [["Chocolate Bar", 15], ["Onions", 8], ["Tbone steaks", 2], ["Lemon", 5], ["Whiskey", 1]];
+console.log(myList);
+
+console.log(next);
+
+function reusableFunction() {
+  console.log("Hi World");
+}
+
+reusableFunction()
+reusableFunction()
+reusableFunction()
+
+console.log(next);
+
+function functionWithArgs(par1, par2) {
+  console.log(par1 + par2);
+}
+functionWithArgs(1, 2);
+functionWithArgs(7, 9);
+
+console.log(next);
+
+function timesFive(num) {
+  return num * 5;
+}
+const answer = timesFive(5);
+console.log(answer);
+
+console.log(next);
+
+// Declare the myGlobal variable below this line
+let myGlobal = 10;
+
+function fun1() {
+  // Assign 5 to oopsGlobal here
+  oopsGlobal = 5
+}
+
+// Only change code above this line
+
+function fun2() {
+  let output = "";
+  if (typeof myGlobal != "undefined") {
+    output += "myGlobal: " + myGlobal;
+  }
+  if (typeof oopsGlobal != "undefined") {
+    output += " oopsGlobal: " + oopsGlobal;
+  }
+  console.log(output);
+}
+
+console.log(next);
+
+function myLocalScope() {
+  // Only change code below this line
+  const myVar = "This one is";
+  console.log(myVar, 'inside myLocalScope.');
+}
+myLocalScope();
+const myVar = "This one is";
+// Run and check the console
+// myVar is not defined outside of myLocalScope
+console.log(myVar, 'outside myLocalScope.');
+
+console.log(next);
+
+const outerWear = "T-Shirt";
+
+function myOutfit() {
+  const outerWear = "sweater";
+  return outerWear;
+}
+
+myOutfit();
+
+console.log(outerWear);
+
+console.log(next);
+
+// Setup
+let sum = 0;
+
+function addThree() {
+  sum = sum + 3;
+}
+
+function addFive() {
+  sum = sum + 5;
+}
+
+addThree();
+addFive();
+
+console.log(sum * 7);
+
+console.log(next);
+
+let processed = 0;
+
+function processArg(num) {
+  return (num + 3) / 5;
+}
+
+processed = processArg(7);
+
+console.log(processed);
+
+console.log(next);
+
+function nextInLine(arr, item) {
+  arr.push(item);
+  const removed = arr.shift();
+  return removed;
+}
+
+let testArr = [1, 2, 3, 4, 5];
+
+console.log("Before: " + JSON.stringify(testArr));
+console.log(nextInLine(testArr, 6));
+console.log("After: " + JSON.stringify(testArr));
+
+console.log(next);
+
+function welcomeToBooleans() {
+  return true;
+}
+
+console.log(true);
+
+console.log(next);
+
+function trueOrFalse(wasThatTrue) {
+  if (wasThatTrue) {
+    return "Yes, that was true";
+  }
+  return "No, that was false";
+}
+
+console.log(next);
+
+function testEqual(val) {
+  if (val == 12) {
+    return "Equal";
+  }
+  return "Not Equal";
+}
+
+testEqual(10);
+
+console.log(next);
+
+function testStrict(val) {
+  if (val === 7) {
+    return "Equal";
+  }
+  return "Not Equal";
+}
+
+testStrict(10);
+
+console.log(next);
+
+function compareEquality(a, b) {
+  if (a === b) {
+    return "Equal";
+  }
+  return "Not Equal";
+}
+
+compareEquality(10, "10");
+
+console.log(next);
+
+function testNotEqual(val) {
+  if (val != 99) {
+    return "Not Equal";
+  }
+  return "Equal";
+}
+
+testNotEqual(10);
+
+console.log(next);
+
+function testStrictNotEqual(val) {
+  if (val !== 17) {
+    return "Not Equal";
+  }
+  return "Equal";
+}
+
+testStrictNotEqual(10);
+
+console.log(next);
+
+function testGreaterThan(val) {
+  if (val > 100) {
+    return "Over 100";
+  }
+
+  if (val > 10) {
+    return "Over 10";
+  }
+
+  return "10 or Under";
+}
+
+testGreaterThan(10);
+
+console.log(next);
+
+function testGreaterOrEqual(val) {
+  if (val >= 20) {
+    return "20 or Over";
+  }
+
+  if (val >= 10) {
+    return "10 or Over";
+  }
+
+  return "Less than 10";
+}
+
+testGreaterOrEqual(10);
+
+console.log(next);
+
+function testLessThan(val) {
+  if (val < 25) {
+  return "Under 25";
+  }
+
+  if (val < 55) {
+  return "Under 55";
+  }
+
+  return "55 or Over";
+}
+
+testLessThan(10);
+
+console.log(next);
+
+function testLessOrEqual(val) {
+  if (val <= 12) {
+  console.log("Smaller Than or Equal to 12");
+  } else if (val <= 24) {
+  console.log("Smaller Than or Equal to 24");
+  } else {
+  console.log("More Than 24");
+  }
+}
+
+testLessOrEqual(10);
+
+console.log(next);
+
+function testLogicalAnd(val) {
+
+  if (val <= 50 && val >= 25) {
+  console.log("Yes");
+  } else {
+  console.log("No");
+  }
+}
+
+testLogicalAnd(10);
+
+console.log(next);
+
+function testLogicalOr(val) {
+
+  if (val < 10 || val > 20) {
+  console.log("Outside");
+  } else {
+  console.log("Inside");
+  }
+}
+
+testLogicalOr(15);
+
+console.log(next);
+
+function testElse(val) {
+  let result = "";
+
+  if (val > 5) {
+    result = "Bigger than 5";
+  } else {
+    result = "5 or Smaller";
+  }
+  console.log(result);
+}
+
+testElse(4);
+
+console.log(next);
+
+function testElseIf(val) {
+  if (val > 10) {
+    console.log("Greater than 10");
+  } else if (val < 5) {
+    console.log("Smaller than 5");
+  } else {
+    console.log("Between 5 and 10");
+  }
+}
+testElseIf(7);
+
+console.log(next);
+
+function orderMyLogic(val) {
+  if (val < 5) {
+    console.log("Less than 5");
+  } else if (val < 10) {
+    console.log("Less than 10");
+  } else {
+    console.log("Greater than or equal to 10");
+  }
+}
+
+orderMyLogic(7);
+
+console.log(next);
+
+function testSize(num) {
+  if (num < 5) { 
+    console.log("Tiny");
+  } else if (num < 10) { 
+    console.log("Small");
+  } else if (num < 15) {
+    console.log("Medium");
+  } else if (num < 20) {
+    console.log("Large");
+  } else if (num >= 20) {
+    console.log("Huge");
+  } else {
+    console.log("Change Me");
+  }
+}
+
+testSize(7);
+
+console.log(next);
+
+const names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
+
+function golfScore(par, strokes) {
+  if (strokes == 1) {
+    console.log(names [0]);
+  } else if (strokes <= par -2) {
+    console.log(names [1]);
+  } else if (strokes === par - 1) {
+    console.log(names [2]);
+  } else if (strokes === par) {
+    console.log(names [3]);
+  } else if (strokes === par + 1) {
+    console.log(names [4]);
+  } else if (strokes === par + 2) {
+    console.log(names [5]);
+  } else if (strokes === par + 3) {
+    console.log(names [6]);
+  } else {
+    console.log(names [6]);
+  }
+}
+golfScore(5, 4);
+
+console.log(next);
+
+function caseInSwitch(val) {
+  let answer = "";
+
+switch (val) {
+  case 1:
+    answer = "Alpha";
+    break;
+  case 2:
+    answer = "Beta";
+    break;
+  case 3:
+    answer = "Gamma";
+    break;
+  case 4:
+    answer = "Delta";
+    break;
+}
+
+  console.log(answer);
+}
+
+caseInSwitch(3);
+
+console.log(next);
+
+function switchOfStuff(val) {
+  let answer = "";
+
+  switch (val) {
+    case "a":
+      answer = "apple";
+      break;
+    case "b":
+      answer = "bird";
+      break;
+    case "c":
+      answer = "cat";
+      break;
+    default:
+      answer = "stuff";
+  }
+
+  console.log(answer);
+}
+
+switchOfStuff("c");
+
+console.log(next);
+
+function sequentialSizes(val) {
+  let answer = "";
+
+  switch (val) {
+    case 1:
+    case 2:
+    case 3:
+      answer = "Low";
+      break;
+    case 4:
+    case 5:
+    case 6:
+      answer = "Mid";
+      break;
+    case 7:
+    case 8:
+    case 9:
+      answer = "High";
+  }
+
+  console.log(answer);
+}
+
+sequentialSizes(2);
+
+console.log(next);
+
+function chainToSwitch(val) {
+  let answer = "";
+
+switch (val) {
+  case "bob":
+    answer = "Marley";
+    break;
+  case 42:
+    answer = "The Answer";
+    break;
+  case 1:
+    answer = "There is no #1";
+    break;
+  case 99:
+    answer = "Missed it by that much!";
+    break;
+  case 7:
+    answer = "Ate Nine";
+}
+
+  console.log(answer);
+}
+
+chainToSwitch(99);
+
+console.log(next);
+
+function isLess(a, b) {
+  return a < b;
+}
+
+isLess(10, 15);
+
+console.log(isLess);
+
+console.log(next);
+
+function abTest(a, b) {
+  if (a < 0 || b < 0) {
+  return undefined;
+}
+
+  return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+}
+
+abTest(2,2);
+
+console.log(abTest);
+
+console.log(next);
+
+let count = 0;
+
+function cc(card) {
+
+  switch (card) {
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+      count++;
+      break;
+
+    case 10:
+    case "J":
+    case "Q":
+    case "K":
+    case "A":
+      count--;
+      break;
+  }
+
+  if (count > 0) {
+    console.log(count + " Bet");
+  } else {
+    console.log(count + " Hold");
+  }
+
+  // Only change code above this line
+}
+
+cc(2); cc(3); cc(7); cc('K'); cc('A');
+
+console.log(next);
+
+
+
+console.log(next);
