@@ -765,7 +765,6 @@ function cc(card) {
     console.log(count + " Hold");
   }
 
-  // Only change code above this line
 }
 
 cc(2); cc(3); cc(7); cc('K'); cc('A');
