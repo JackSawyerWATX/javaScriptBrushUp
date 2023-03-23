@@ -822,3 +822,7 @@ const player = anotherObj[playerNumber];
 console.log(player);
 
 console.log(next);
+
+
+
+console.log(next);
