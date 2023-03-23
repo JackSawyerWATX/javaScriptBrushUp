@@ -877,9 +877,65 @@ function phoneticLookup(val) {
     "foxtrot": "Frank"
   };
 result = lookup[val];
-  return result;
+  console.log(result);
 }
 
 phoneticLookup("charlie");
+
+console.log(next);
+
+function checkObj(obj, checkProp) {
+  
+  if (obj.hasOwnProperty(checkProp)) {
+    console.log(obj[checkProp]);
+  } else {
+    console.log("Not Found");
+  }
+}
+
+console.log(next);
+
+const myMusic = [
+  {
+    "artist": "Billy Joel",
+    "title": "Piano Man",
+    "release_year": 1973,
+    "formats": [
+      "CD",
+      "8T",
+      "LP"
+    ],
+    "gold": true
+  },
+  {
+    "artist": "Foo Fighters",
+    "title": "The Colour and the Shape",
+    "release_year": 1998,
+    "formats": [
+      "CD",
+      "Cassette",
+      "LP"
+    ],
+    "gold": true
+  }
+];
+
+console.log(next);
+
+const myStorage = {
+  "car": {
+    "inside": {
+      "glove box": "maps",
+      "passenger seat": "crumbs"
+     },
+    "outside": {
+      "trunk": "jack"
+    }
+  }
+};
+
+const gloveBoxContents = myStorage.car.inside["glove box"];
+
+console.log(gloveBoxContents);
 
 console.log(next);
