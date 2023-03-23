@@ -825,7 +825,7 @@ console.log(next);
 
 // Setup
 const myDog2 = {
-  "name": "Coder",
+  "name": "Campers",
   "legs": 4,
   "tails": 1,
   "friends": ["Happy Campers"]
@@ -835,5 +835,22 @@ const myDog2 = {
 myDog2.friends = "Happy Coder"
 
 console.log(myDog2);
+
+console.log(next);
+
+const myDog3 = {
+  "name": "Campers",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["Happy Campers"]
+};
+
+myDog3.bark = "woof";
+
+console.log(myDog3);
+
+console.log(next);
+
+
 
 console.log(next);
