@@ -771,6 +771,54 @@ cc(2); cc(3); cc(7); cc('K'); cc('A');
 
 console.log(next);
 
+const myDog = {
+  "name": "Bumpers",
+  "legs": 4, 
+  "tails": 1,
+  "friends": ["Emmitt", "Mags"]
+};
 
+console.log(myDog);
+
+console.log(next);
+
+const testObj = {
+  "hat": "ballcap",
+  "shirt": "jersey",
+  "shoes": "cleats"
+};
+
+const hatValue = testObj.hat;
+const shirtValue = testObj.shirt;
+const shoesValue = testObj.shoes;
+
+console.log(hatValue, shirtValue, shoesValue);
+
+console.log(next);
+
+// Setup
+const newObj = {
+  "an entree": "lobster",
+  "my side": "asparigus",
+  "the drink": "martini"
+};
+
+const entreeValue = newObj["an entree"];
+const sideValue = newObj["my side"];
+const drinkValue = newObj["the drink"];
+
+console.log(entreeValue, sideValue, drinkValue);
+
+console.log(next);
+
+const anotherObj = {
+  12: "Joe Namath",
+  16: "Joe Montana",
+  19: "Johnny Unitas"
+};
+
+const playerNumber = 16;
+const player = anotherObj[playerNumber];
+console.log(player);
 
 console.log(next);
