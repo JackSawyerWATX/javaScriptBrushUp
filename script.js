@@ -851,7 +851,6 @@ console.log(myDog3);
 
 console.log(next);
 
-// Setup
 const myDog4 = {
   "name": "Happy Coder",
   "legs": 4,
@@ -866,6 +865,21 @@ console.log(myDog4);
 
 console.log(next);
 
+function phoneticLookup(val) {
+  let result = "";
 
+  const lookup = {
+    "alpha": "Adams",
+    "bravo": "Boston",
+    "charlie": "Chicago",
+    "delta": "Denver",
+    "echo": "Easy",
+    "foxtrot": "Frank"
+  };
+result = lookup[val];
+  return result;
+}
+
+phoneticLookup("charlie");
 
 console.log(next);
