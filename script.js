@@ -935,7 +935,141 @@ const myStorage = {
 };
 
 const gloveBoxContents = myStorage.car.inside["glove box"];
+  console.log(gloveBoxContents);
 
-console.log(gloveBoxContents);
+console.log(next);
+
+const myPlants = [
+  {
+    type: "flowers",
+    list: ["rose", "tulip", "dandelion"] 
+  } , {
+    type: "trees",
+    list: ["fir", "pine", "birch" ]
+  }
+];
+
+const secondTree = myPlants[1].list[1];
+  console.log(secondTree);
+
+console.log(next);
+
+// Setup
+const recordCollection = {
+  2548: {
+    albumTitle: 'Slippery When Wet',
+    artist: 'Bon Jovi',
+    tracks: ['Let It Rock', 'You Give Love a Bad Name']
+  },
+  2468: {
+    albumTitle: '1999',
+    artist: 'Prince',
+    tracks: ['1999', 'Little Red Corvette']
+  },
+  1245: {
+    artist: 'Robert Palmer',
+    tracks: []
+  },
+  5439: {
+    albumTitle: 'ABBA Gold'
+  }
+};
+
+// Only change code below this line
+function updateRecords(records, id, prop, value) {
+  if (prop !== "tracks" && value !== "") {
+    records[id][prop] = value;
+  } else if (prop === "tracks" && !records[id].hasOwnProperty("tracks")) {
+    records[id]["tracks"] = [value];
+  } else if (prop === "tracks" && value !== "") {
+    records[id]["tracks"].push(value);
+  } else if (value === "") {
+    delete records[id][prop];
+  }
+  return records;
+}
+
+updateRecords(recordCollection, 5439, "artist", "ABBA");
+updateRecords(recordCollection, 5439, "tracks", "Dancing Queen");
+updateRecords(recordCollection, 5439, "tracks", "Knowing Me, Knowing You");
+updateRecords(recordCollection, 5439, "tracks", "Take A Chance On Me");
+updateRecords(recordCollection, 5439, "tracks", "Mamma Mia");
+updateRecords(recordCollection, 5439, "tracks", "Lay All Your Love On Me");
+updateRecords(recordCollection, 5439, "tracks", "Super Trouper");
+updateRecords(recordCollection, 5439, "tracks", "I Have a Dream");
+updateRecords(recordCollection, 5439, "tracks", "The Winner Takes It All");
+updateRecords(recordCollection, 5439, "tracks", "Money, Money, Money");
+updateRecords(recordCollection, 5439, "tracks", "S.O.S.");
+
+updateRecords(recordCollection, 1245, "albumTitle", "Riptide");
+updateRecords(recordCollection, 1245, "tracks", "Riptide");
+updateRecords(recordCollection, 1245, "tracks", "Hyperactive");
+updateRecords(recordCollection, 1245, "tracks", "Addicted to Love");
+updateRecords(recordCollection, 1245, "tracks", "Trick Bag");
+updateRecords(recordCollection, 1245, "tracks", "Get It Through Your Heart");
+updateRecords(recordCollection, 1245, "tracks", "I Didn't Mean To Turn You On");
+updateRecords(recordCollection, 1245, "tracks", "Flesh Wound");
+updateRecords(recordCollection, 1245, "tracks", "Discipline of Love");
+updateRecords(recordCollection, 1245, "tracks", "Riptide (Reprise)");
+
+updateRecords(recordCollection, 2548, "tracks", "Let It Rock");
+updateRecords(recordCollection, 2548, "tracks", "You Give Love a Bad Name");
+updateRecords(recordCollection, 2548, "tracks", "Livin' on a Prayer");
+updateRecords(recordCollection, 2548, "tracks", "Social Disease");
+updateRecords(recordCollection, 2548, "tracks", "Wanted Dead or Alive");
+updateRecords(recordCollection, 2548, "tracks", "Raise Your Hands");
+updateRecords(recordCollection, 2548, "tracks", "Without Love");
+updateRecords(recordCollection, 2548, "tracks", "I'd Die for You");
+updateRecords(recordCollection, 2548, "tracks", "Never Say Goodbye");
+
+updateRecords(recordCollection, 2468, "tracks", "1999");
+updateRecords(recordCollection, 2468, "tracks", "Little Red Corvette");
+updateRecords(recordCollection, 2468, "tracks", "Delirious");
+updateRecords(recordCollection, 2468, "tracks", "Let's Pretend We're Married");
+updateRecords(recordCollection, 2468, "tracks", "D. M. S. R.");
+updateRecords(recordCollection, 2468, "tracks", "Automatic");
+updateRecords(recordCollection, 2468, "tracks", "Something In The Water (Does Not Compute)");
+updateRecords(recordCollection, 2468, "tracks", "Free");
+updateRecords(recordCollection, 2468, "tracks", "Lady Cab Driver");
+updateRecords(recordCollection, 2468, "tracks", "All the Critics Love U in New York");
+updateRecords(recordCollection, 2468, "tracks", "International Lover");
+
+console.log(recordCollection);
+
+console.log(next);
+
+const thisArray = [];
+
+let x = 5;
+while (x >= 0) {
+thisArray.push(x);
+x--;
+}
+
+console.log(thisArray);
+console.log(x);
+
+console.log(next);
+
+
+const thisArray2 = [];
+
+
+for (let i = 1; i <= 5; i++) {
+  thisArray2.push(i);
+}
+
+console.log(thisArray2);
+console.log(i);
+
+console.log(next);
+
+// Setup
+const thisArray3 = [];
+  for (let ii = 1; ii <= 9; ii += 2) {
+    thisArray3.push(ii);
+  }
+
+  console.log(thisArray3);
 
 console.log(next);
