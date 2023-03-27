@@ -469,11 +469,11 @@ console.log(next);
 
 function testLessThan(val) {
   if (val < 25) {
-  return "Under 25";
+    return "Under 25";
   }
 
   if (val < 55) {
-  return "Under 55";
+    return "Under 55";
   }
 
   return "55 or Over";
@@ -485,11 +485,11 @@ console.log(next);
 
 function testLessOrEqual(val) {
   if (val <= 12) {
-  console.log("Smaller Than or Equal to 12");
+    console.log("Smaller Than or Equal to 12");
   } else if (val <= 24) {
-  console.log("Smaller Than or Equal to 24");
+    console.log("Smaller Than or Equal to 24");
   } else {
-  console.log("More Than 24");
+    console.log("More Than 24");
   }
 }
 
@@ -500,9 +500,9 @@ console.log(next);
 function testLogicalAnd(val) {
 
   if (val <= 50 && val >= 25) {
-  console.log("Yes");
+    console.log("Yes");
   } else {
-  console.log("No");
+    console.log("No");
   }
 }
 
@@ -513,9 +513,9 @@ console.log(next);
 function testLogicalOr(val) {
 
   if (val < 10 || val > 20) {
-  console.log("Outside");
+    console.log("Outside");
   } else {
-  console.log("Inside");
+    console.log("Inside");
   }
 }
 
@@ -566,9 +566,9 @@ orderMyLogic(7);
 console.log(next);
 
 function testSize(num) {
-  if (num < 5) { 
+  if (num < 5) {
     console.log("Tiny");
-  } else if (num < 10) { 
+  } else if (num < 10) {
     console.log("Small");
   } else if (num < 15) {
     console.log("Medium");
@@ -589,21 +589,21 @@ const names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey"
 
 function golfScore(par, strokes) {
   if (strokes == 1) {
-    console.log(names [0]);
-  } else if (strokes <= par -2) {
-    console.log(names [1]);
+    console.log(names[0]);
+  } else if (strokes <= par - 2) {
+    console.log(names[1]);
   } else if (strokes === par - 1) {
-    console.log(names [2]);
+    console.log(names[2]);
   } else if (strokes === par) {
-    console.log(names [3]);
+    console.log(names[3]);
   } else if (strokes === par + 1) {
-    console.log(names [4]);
+    console.log(names[4]);
   } else if (strokes === par + 2) {
-    console.log(names [5]);
+    console.log(names[5]);
   } else if (strokes === par + 3) {
-    console.log(names [6]);
+    console.log(names[6]);
   } else {
-    console.log(names [6]);
+    console.log(names[6]);
   }
 }
 golfScore(5, 4);
@@ -613,20 +613,20 @@ console.log(next);
 function caseInSwitch(val) {
   let answer = "";
 
-switch (val) {
-  case 1:
-    answer = "Alpha";
-    break;
-  case 2:
-    answer = "Beta";
-    break;
-  case 3:
-    answer = "Gamma";
-    break;
-  case 4:
-    answer = "Delta";
-    break;
-}
+  switch (val) {
+    case 1:
+      answer = "Alpha";
+      break;
+    case 2:
+      answer = "Beta";
+      break;
+    case 3:
+      answer = "Gamma";
+      break;
+    case 4:
+      answer = "Delta";
+      break;
+  }
 
   console.log(answer);
 }
@@ -689,22 +689,22 @@ console.log(next);
 function chainToSwitch(val) {
   let answer = "";
 
-switch (val) {
-  case "bob":
-    answer = "Marley";
-    break;
-  case 42:
-    answer = "The Answer";
-    break;
-  case 1:
-    answer = "There is no #1";
-    break;
-  case 99:
-    answer = "Missed it by that much!";
-    break;
-  case 7:
-    answer = "Ate Nine";
-}
+  switch (val) {
+    case "bob":
+      answer = "Marley";
+      break;
+    case 42:
+      answer = "The Answer";
+      break;
+    case 1:
+      answer = "There is no #1";
+      break;
+    case 99:
+      answer = "Missed it by that much!";
+      break;
+    case 7:
+      answer = "Ate Nine";
+  }
 
   console.log(answer);
 }
@@ -725,13 +725,13 @@ console.log(next);
 
 function abTest(a, b) {
   if (a < 0 || b < 0) {
-  return undefined;
-}
+    return undefined;
+  }
 
   return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
 }
 
-abTest(2,2);
+abTest(2, 2);
 
 console.log(abTest);
 
@@ -773,7 +773,7 @@ console.log(next);
 
 const myDog = {
   "name": "Bumpers",
-  "legs": 4, 
+  "legs": 4,
   "tails": 1,
   "friends": ["Emmitt", "Mags"]
 };
@@ -876,7 +876,7 @@ function phoneticLookup(val) {
     "echo": "Easy",
     "foxtrot": "Frank"
   };
-result = lookup[val];
+  result = lookup[val];
   console.log(result);
 }
 
@@ -885,7 +885,7 @@ phoneticLookup("charlie");
 console.log(next);
 
 function checkObj(obj, checkProp) {
-  
+
   if (obj.hasOwnProperty(checkProp)) {
     console.log(obj[checkProp]);
   } else {
@@ -927,7 +927,7 @@ const myStorage = {
     "inside": {
       "glove box": "maps",
       "passenger seat": "crumbs"
-     },
+    },
     "outside": {
       "trunk": "jack"
     }
@@ -935,22 +935,22 @@ const myStorage = {
 };
 
 const gloveBoxContents = myStorage.car.inside["glove box"];
-  console.log(gloveBoxContents);
+console.log(gloveBoxContents);
 
 console.log(next);
 
 const myPlants = [
   {
     type: "flowers",
-    list: ["rose", "tulip", "dandelion"] 
-  } , {
+    list: ["rose", "tulip", "dandelion"]
+  }, {
     type: "trees",
-    list: ["fir", "pine", "birch" ]
+    list: ["fir", "pine", "birch"]
   }
 ];
 
 const secondTree = myPlants[1].list[1];
-  console.log(secondTree);
+console.log(secondTree);
 
 console.log(next);
 
@@ -1042,8 +1042,8 @@ const thisArray = [];
 
 let x = 5;
 while (x >= 0) {
-thisArray.push(x);
-x--;
+  thisArray.push(x);
+  x--;
 }
 
 console.log(thisArray);
@@ -1066,10 +1066,52 @@ console.log(next);
 
 // Setup
 const thisArray3 = [];
-  for (let ii = 1; ii <= 9; ii += 2) {
-    thisArray3.push(ii);
-  }
+for (let ii = 1; ii <= 9; ii += 2) {
+  thisArray3.push(ii);
+}
 
-  console.log(thisArray3);
+console.log(thisArray3);
+
+console.log(next);
+
+// Setup
+const thisArray4 = [];
+for (let iii = 9; iii >= 1; iii -= 2) {
+  thisArray4.push(iii);
+}
+
+console.log(thisArray4);
+
+console.log(next);
+
+const arr = [10, 9, 8, 7, 6];
+
+for (let i = 0; i < arr.length; i++) {
+  console.log(arr[i]);
+}
+
+const thisArray5 = [2, 3, 4, 5, 6];
+
+let total = 0;
+for (let i = thisArray5.length - 1; i >= 0; i--) {
+  total += thisArray5[i];
+}
+
+console.log(thisArray5);
+
+console.log(next);
+
+function multiplyAll(arr) {
+  let product = 1;
+
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+      product = product * arr[i][j];
+    }
+  }
+  console.log(product);
+}
+
+multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
 
 console.log(next);
