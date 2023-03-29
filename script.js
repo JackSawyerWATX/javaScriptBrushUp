@@ -1188,3 +1188,74 @@ function lookUpProfile(name, prop) {
 lookUpProfile("Akira", "likes");
 
 console.log(next);
+
+function randomFraction() {
+  return(Math.random());
+}
+console.log(randomFraction);
+
+console.log(next);
+
+function randomWholeNum() {
+  return Math.floor(Math.random() * 10);
+}
+
+console.log(randomWholeNum);
+
+console.log(next);
+
+function randomRange(myMin, myMax) {
+  return Math.floor(Math.random() * (myMax - myMin + 1) + myMin);
+}
+console.log(randomRange);
+
+console.log(next);
+
+function convertToInteger(str) {
+  return parseInt(str)
+}
+convertToInteger("56");
+
+console.log(next);
+
+function convertToInteger(str) {
+  return parseInt(str, 2);
+}
+
+convertToInteger("10011");
+
+console.log(next);
+
+function checkEqual(a, b) {
+  return a === b ? "Equal" : "Not Equal";
+}
+
+checkEqual(1, 2);
+
+console.log(next);
+
+function checkSign(num) {
+  return (num === 0) ? "zero" : (num > 0) ? "positive"  : "negative";
+}
+
+checkSign(10);
+
+console.log(next);
+
+function countdown(n){
+  if (n < 1) {
+    return [];
+  } else {
+    const countArray = countdown(n - 1);
+    countArray.unshift(n);
+    return countArray;
+  }
+}
+
+console.log(next);
+
+function rangeOfNumbers(startNum, endNum) {
+  return endNum < startNum ? [] : rangeOfNumbers(startNum, endNum - 1).concat(endNum);
+};
+
+console.log(next);
