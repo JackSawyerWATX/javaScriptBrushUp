@@ -1190,7 +1190,7 @@ lookUpProfile("Akira", "likes");
 console.log(next);
 
 function randomFraction() {
-  return(Math.random());
+  return (Math.random());
 }
 console.log(randomFraction);
 
@@ -1235,14 +1235,14 @@ checkEqual(1, 2);
 console.log(next);
 
 function checkSign(num) {
-  return (num === 0) ? "zero" : (num > 0) ? "positive"  : "negative";
+  return (num === 0) ? "zero" : (num > 0) ? "positive" : "negative";
 }
 
 checkSign(10);
 
 console.log(next);
 
-function countdown(n){
+function countdown(n) {
   if (n < 1) {
     return [];
   } else {
@@ -1259,3 +1259,217 @@ function rangeOfNumbers(startNum, endNum) {
 };
 
 console.log(next);
+
+function palindrome(str) {
+  var re = /[\W_]/g;
+  var lowRegStr = str.toLowerCase().replace(re, '');
+  var reverseStr = lowRegStr.split('').reverse().join('');
+  return reverseStr === lowRegStr;
+}
+
+palindrome("eye",);
+
+console.log(next);
+
+const convertArabicToRoman = function (num) {
+  const rules = {
+    "M": 1000,
+    "CM": 900,
+    "D": 500,
+    "CD": 400,
+    "C": 100,
+    "XC": 90,
+    "L": 50,
+    "XL": 40,
+    "XXX": 30,
+    "XX": 20,
+    "X": 10,
+    "IX": 9,
+    "V": 5,
+    "IV": 4,
+    "I": 1
+  }
+
+  let res = "";
+  const romans = Object.keys(rules);
+
+  for (let i = 0; i < romans.length; ++i) {
+    const val = rules[romans[i]];
+
+    while (num >= val) {
+      num -= val;
+      res += romans[i];
+    }
+  }
+  return res;
+};
+
+console.log(next);
+
+const convertToRoman = function (num) {
+  const rules = {
+    "M": 1000,
+    "CM": 900,
+    "D": 500,
+    "CD": 400,
+    "C": 100,
+    "XC": 90,
+    "L": 50,
+    "XL": 40,
+    "XXX": 30,
+    "XX": 20,
+    "X": 10,
+    "IX": 9,
+    "V": 5,
+    "IV": 4,
+    "I": 1
+  }
+
+  let res = "";
+  const romans = Object.keys(rules);
+
+  for (let i = 0; i < romans.length; ++i) {
+    const val = rules[romans[i]];
+
+    while (num >= val) {
+      num -= val;
+      res += romans[i];
+    }
+  }
+  console.log(res);
+}
+
+console.log(next);
+
+function rot13(str) {
+
+  var alphabets = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', " ", "-", "_", ".", "&", "?", "!", "@", "#", "/"];
+
+  var alphabets13 = ['N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', " ", "-", "_", ".", "&", "?", "!", "@", "#", "/"];
+
+  var resultStr = [];
+  for (let i = 0; i < str.length; i++) {
+    for (let j = 0; j < alphabets.length; j++) {
+      if (str[i] === alphabets[j]) {
+        resultStr.push(alphabets13[j]);
+      }
+    }
+  }
+  return resultStr.join("");
+};
+
+console.log(next);
+
+function telephoneCheck(str) {
+
+  return /^(1\s|1)?(\(\d{3}\)|\d{3})(-|\s)?\d{3}(-|\s)?\d{4}$/.test(str);
+}
+
+telephoneCheck("555-555-5555");
+
+console.log(next);
+
+function checkCashRegister(price, cash, cid) {
+  const cidCopy = JSON.parse(JSON.stringify(cid)); // JSON limitation might be slow, but for some reason even the faster solutions, like .slice(0) and the other ones, might not work without affecting the original array
+  const revCid = cidCopy.reverse();
+
+  const currencyVal = {
+    "ONE HUNDRED": 100,
+    "TWENTY": 20,
+    "TEN": 10,
+    "FIVE": 5,
+    "ONE": 1,
+    "QUARTER": 0.25,
+    "DIME": 0.1,
+    "NICKEL": 0.05,
+    "PENNY": 0.01
+  }
+
+  // sum up what we have in cash-in-drawer
+  const cidSum = cid.reduce((acc, val) => {
+    if (!isNaN(acc + val[1])) {
+      return acc + val[1];
+    }
+  }, 0);
+
+  // convert units in order to work aroung floating point number limitations
+  function convertDollarToCent(val) {
+    if (!Array.isArray(val) && typeof val === "object") {
+      const currencyValCopy = { ...val };
+
+      for (let dollar in currencyValCopy) {
+        currencyValCopy[dollar] *= 100;
+      }
+      return currencyValCopy;
+    }
+    if (Array.isArray(val)) {
+      const currencyValCopy = [...val];
+
+      currencyValCopy.forEach(dollar => {
+        return dollar[1] *= 100;
+      });
+      return currencyValCopy;
+    }
+    else {
+      return val * 100;
+    }
+  }
+  const centPrice = convertDollarToCent(price);
+  const centCash = convertDollarToCent(cash);
+  const centUnit = convertDollarToCent(currencyVal);
+  const centRevCid = convertDollarToCent(revCid);
+  const centCidSum = convertDollarToCent(cidSum);
+  let change = centCash - centPrice;
+
+  let changeObj = {}
+
+  function calculateChange() {
+    for (let unit in centUnit) { // loop through each Currency Unit
+      centRevCid.forEach(amount => {  // loop through each amount
+        if (amount[1] >= centUnit[unit] && amount[0] === unit) { // check what I have in cash-in-drawer
+          while (change - centUnit[unit] >= 0 && amount[1]) {
+            // calculate the change and convert it into an object
+            if (Object.keys(changeObj).length === 0 && changeObj.constructor === Object) {
+              changeObj[unit] = centUnit[unit];
+            } else {
+              if (changeObj.hasOwnProperty(unit)) {
+                changeObj[unit] += centUnit[unit];
+              }
+              if (!changeObj.hasOwnProperty(unit)) {
+                changeObj[unit] = centUnit[unit];
+              }
+            }
+
+            change -= centUnit[unit];
+            amount[1] -= centUnit[unit];
+          }
+        }
+      });
+    }
+
+    let changeArr = Object.entries(changeObj); // convert changeObj into an Array
+    // convert the change-unit back from Cent into Dollar
+    changeArr.forEach(cent => {
+      return cent[1] /= 100;
+    });
+
+    return changeArr;
+  }
+
+  let sumChangeArr = calculateChange()
+    .reduce((acc, val) => {
+      if (!isNaN(acc + val[1])) {
+        return acc + val[1] * 100;
+      }
+    }, 0);
+
+  if (change < 0 || centCidSum - change < 0 || change > sumChangeArr) {
+    return { status: "INSUFFICIENT_FUNDS", change: [] };
+  } else if (centCidSum === sumChangeArr) {
+    return { status: "CLOSED", change: cid };
+  } else {
+    return { status: "OPEN", change: calculateChange() };
+  }
+}
+
+console.log(checkCashRegister(19.5, 20, [["PENNY", 0.5], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]));
