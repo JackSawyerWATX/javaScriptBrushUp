@@ -378,6 +378,8 @@ function trueOrFalse(wasThatTrue) {
   return "No, that was false";
 }
 
+console.log(trueOrFalse());
+
 console.log(next);
 
 function testEqual(val) {
@@ -389,6 +391,8 @@ function testEqual(val) {
 
 testEqual(10);
 
+console.log(testEqual());
+
 console.log(next);
 
 function testStrict(val) {
@@ -398,7 +402,9 @@ function testStrict(val) {
   return "Not Equal";
 }
 
-testStrict(10);
+testStrict(7);
+
+console.log(testStrict());
 
 console.log(next);
 
@@ -410,6 +416,8 @@ function compareEquality(a, b) {
 }
 
 compareEquality(10, "10");
+
+console.log(compareEquality());
 
 console.log(next);
 
